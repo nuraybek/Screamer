@@ -1,212 +1,124 @@
-<!DOCTYPE html><html lang="ru"><head> 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-wid1th, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">  
-<title>Free Download By Parad1st</title>
-<meta property="og:title" content="Free Download"> 
-<meta property="og:site_name" content="Free Download">
-<meta property="og:image" content="images/Parad1st.png">
-<meta property="og:description" content="Free Download By Parad1st - скачать абсолютно бесплатно!"> 
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="photo">
-<meta name="twitter:title" content="Programm">
-<meta name="twitter:site" content="@fps_boost">
-<meta name="twitter:description" content="FREE!">
-<meta name="twitter:image:src" content="Parad1st.png">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&amp;display=swap" rel="stylesheet">
-<style type="text/css">
-            p {
-                margin: 0;
-            }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жаныма💖</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            font-variant: small-caps;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            background: linear-gradient(-45deg, #8A2BE2, #1E90FF, #000000, #FF1493);
+            background-size: 400% 400%;
+            animation: gradientBG 12s infinite alternate ease-in-out;
+        }
 
-            *, *::before, *::after {
-                box-sizing: border-box;
-            }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-            .overlay, .scare {
-                position: fixed;
+        .heart {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            opacity: 0.6;
+            z-index: -1;
+            font-size: 24px;
+            animation: floatingHearts 8s linear infinite, glow 1.5s infinite alternate;
+        }
 
-                top: 0;
-                left: 0;
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+        }
 
-                height: 100vh;
-                width: 100vw;
-            }
+        @keyframes floatingHearts {
+            0% { transform: translateY(100vh) scale(1); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+        }
 
-            p.overlay-title {
-                font-size: 24px;
-                font-weight: 900;
-                color: black;
-                line-height: 1;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-                margin-bottom: 16px;
-            }
+        .text-block {
+            font-size: 20px;
+            font-variant: small-caps;
+            margin-bottom: 20px;
+        }
 
-            .overlay-button {
-                display: inline-flex;
-                align-items: center;
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 300px;
+        }
 
-                height: 40px;
-
-                padding-right: 24px;
-                padding-left: 24px;
-
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 1;
-
-                border-radius: 4px;
-
-                margin: 4px;
-
-                cursor: pointer;
-            }
-
-            .overlay-buttons-wrapper {
-                margin: 24px -8px -8px;
-            }
-
-            #accept-button {
-                background-color: rgb(132, 94, 194);
-
-                color: white;
-            }
-
-            #decline-button {
-                color: rgb(132, 94, 194);
-
-                border: 2px solid rgb(132, 94, 194);
-            }
-
-            p.overlay-description {
-                font-size: 16px;
-                font-weight: 400;
-                color: rgba(0, 0, 0, 0.5);
-                line-height: 1.25;
-
-                margin-bottom: 16px;
-            }
-
-            a.overlay-link {
-                display: inline-block;
-
-                text-decoration: none;
-
-                font-size: 16px;
-                font-weight: 500;
-                color: rgb(132, 94, 194);
-                line-height: 1;
-
-                position: relative;
-
-                margin-top: 16px;
-            }
-
-            a.overlay-link::before {
-                position: absolute;
-
-                content: "";
-
-                height: calc(50% + 4px);
-                width: calc(100% + 8px);
-
-                bottom: -4px;
-                left: -4px;
-
-                background-color: rgba(132, 94, 194, 0.1);
-            }
-
-            .overlay-body {
-                max-width: 512px;
-
-                text-align: center;
-
-                font-family: "Inter", sans-serif;
-            }
-
-            .overlay[hidden] {
-                display: none;
-            }
-
-            .overlay {
-                z-index: 2;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                background-color: #f5f6fa;
-
-                padding-right: 24px;
-                padding-left: 24px;
-            }
-
-            .scare {
-                z-index: 1;
-            }
-
-            video#video {
-                height: 100%;
-                width: 100%;
-
-                object-fit: cover;
-            }
-
-            video#video::-webkit-media-controls-enclosure {
-                display:none !important;
-            }
-        </style>
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
-<div id="overlay" class="overlay">
-<div class="overlay-body">
-<p class="overlay-title">Cookies и сторонний контент</p>
-<p class="overlay-description">Этот сайт использует cookies что-бы собирать информацию об ошибках
-чтобы улучшить сайт и исправить ошибки. Приймите cookies для хорошей
-оптимальной производительности.</p>
-<div class="overlay-buttons-wrapper">
-<div id="accept-button" class="overlay-button">Принять</div>
-<div id="decline-button" class="overlay-button">Отклонить</div>
-</div>
-<a href="https://parad1st.github.io/" target="_blank" class="overlay-link">Пользовательское соглашение</a>
-</div>
-</div>
-<div class="scare">
-<video id="video" class="video" src="media/video.mp4" loop></video>
-</div>
-<script type="text/javascript">
-            const video = document.getElementById("video");
-            const overlay = document.getElementById("overlay");
-            const declineButton = document.getElementById("decline-button");
-            const acceptButton = document.getElementById("accept-button");
 
-            let hasClicked;
+    <audio id="bg-music" loop autoplay>
+        <source src="https://www.dropbox.com/scl/fi/crwh1tq5bmojrnc6h46kx/WhatsApp-Audio-2025-02-08-at-00.09.47-mp3cut.net-1.mp3?rlkey=1txby3ykm7juvleew4yaj1t5f&st=z0f8lfb9&dl=1" type="audio/mp3">
+    </audio>
 
-            window.onbeforeunload = function( ) {
-                if(hasClicked) return true;
-            };
+    <h1>С Днем Святого Валентина, пушониым меным ❤️!</h1>
 
-            function buttonClick(event) {
-                event.preventDefault();
-                if(!hasClicked) hasClicked = true;
-                overlay.hidden = true;
-                video.play();
-                videoClick();
-            }
+    <div class="container">
+        <div class="text-block">
+          <p>Ты – мой воздух, ты – мой свет,</p>
+          <p>Ты – мой самый главный ответ.</p>
+          <p>Без тебя мир стал бы пустым,</p>
+          <p>Сердце билось бы не в ритм.</p>
+          <p>С тобой – счастье, с тобой – мечта,</p>
+          <p>С тобой дорога мне так легка.</p>
+          <p>Ты – мой смысл, моя судьба,</p>
+          <p>Я люблю тебя навсегда!</p>
+        </div>
 
-            function videoClick(event) {
-                if(event) event.preventDefault();
-                const { documentElement } = document;
-                if(documentElement.requestFullscreen) documentElement.requestFullscreen();
-                else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
-                else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
-                else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
-            }
+        <div class="photo-grid">
+            <img src="https://i.postimg.cc/KcVy4rY6/photo-2025-01-08-19-15-13.jpg" alt="Фото 1">
+            <img src="https://i.postimg.cc/9z3SbbRz/photo-2023-01-12-14-57-50.jpg" alt="Фото 2">
+            <img src="https://i.postimg.cc/sD7Dr0J6/photo-2022-12-03-19-44-47.jpg" alt="Фото 3">
+            <img src="https://i.postimg.cc/C1zrGkQX/272bd82e-6da7-4c8b-8da2-70b298fa3cc6.jpg" alt="Фото 4">
+        </div>
+    </div>
 
-            acceptButton.addEventListener("click", buttonClick);
-            declineButton.addEventListener("click", buttonClick);
-            video.addEventListener("click", videoClick);
-        </script>
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = Math.random() > 0.5 ? "💌" : "🎀";
+            heart.classList.add("heart");
+            document.body.appendChild(heart);
 
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = Math.random() * 100 + "vh"; 
+            heart.style.animationDuration = Math.random() * 5 + 5 + "s";
 
-</body></html>
+            setTimeout(() => heart.remove(), 10000);
+        }
+
+        setInterval(createHeart, 300);
+
+        // Автовоспроизведение музыки
+        const audio = document.getElementById("bg-music");
+        audio.play().catch(error => {
+            console.log("Автовоспроизведение заблокировано. Пользователь должен взаимодействовать с сайтом.");
+        });
+    </script>
+
+</body>
+</html>
